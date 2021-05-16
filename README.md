@@ -1,7 +1,7 @@
 # Vue3 + Strapi setup
 
 Quick summary of what is in this setup:
-	- Vue 3 + Vite for the frontend with some basic configurations for better development
+	  - Vue 3 + Vite for the frontend with some basic configurations for better development
     - SCSS and some plugins
     - Strapi with Mongo DB
 
