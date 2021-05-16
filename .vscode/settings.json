@@ -59,6 +59,16 @@
 
       // Create a custom ticker template
       "template": "{symbol} {price} {percent}"
-    }
+    },
+    {
+      // Wow such coin, much riches
+      "symbol": "ADA",
+
+      // The comparison currency symbol
+      "currency": "USD",
+
+      // Create a custom ticker template
+      "template": "{symbol} {price} {percent}"
+    },
   ]
 }
