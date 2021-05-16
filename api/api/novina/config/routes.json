@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/novina",
+      "handler": "novina.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/novina",
+      "handler": "novina.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/novina",
+      "handler": "novina.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

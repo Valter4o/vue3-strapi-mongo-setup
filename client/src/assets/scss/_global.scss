@@ -1,0 +1,32 @@
+header,
+body {
+    background-color: $c-accent;
+}
+
+.wrapper {
+    max-width: $wrapper-width;
+    margin: 0 auto;
+    @include laptop() {
+        padding: 0 1rem;
+    }
+}
+
+* {
+    color: black;
+    font-family: $f-base;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: $c-accent;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    background: $c-primary;
+    border-radius: 5px;
+}
+

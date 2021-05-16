@@ -1,0 +1,64 @@
+{
+  "volar.tsPlugin": true,
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#65c89b",
+    "activityBar.activeBorder": "#945bc4",
+    "activityBar.background": "#65c89b",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#945bc4",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "statusBar.background": "#42b883",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#359268",
+    "titleBar.activeBackground": "#42b883",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#42b88399",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#42b883",
+
+  // Specify the refresh interval in seconds
+  "crypto-ticker.interval": 60,
+
+  // Specify the opening period
+  "crypto-ticker.period": "24HOUR",
+
+  // Customize your high and low colors to suite your status bar
+  "crypto-ticker.higherColor": "#073785",
+  "crypto-ticker.lowerColor": "darkred",
+
+  // Customize your tickers
+  "crypto-ticker.tickers": [
+    {
+      // The base cryptocurrency symbol
+      "symbol": "BTC",
+
+      // The comparison currency symbol
+      "currency": "USD",
+
+      // Create a custom ticker template
+      "template": "{symbol} {price} {percent}"
+    },
+    {
+      // The base cryptocurrency symbol
+      "symbol": "ETH",
+
+      // The comparison currency symbol
+      "currency": "USD",
+
+      // Create a custom ticker template
+      "template": "{symbol} {price} {percent}"
+    },
+    {
+      // Wow such coin, much riches
+      "symbol": "DOGE",
+
+      // The comparison currency symbol
+      "currency": "USD",
+
+      // Create a custom ticker template
+      "template": "{symbol} {price} {percent}"
+    }
+  ]
+}

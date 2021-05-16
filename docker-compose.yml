@@ -1,0 +1,63 @@
+version: "3.4"
+
+services:
+  strapisetup:
+    image: strapi/strapi
+    container_name: strapisetup
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      DATABASE_CLIENT: ${DATABASE_CLIENT}
+      DATABASE_NAME: ${DATABASE_NAME}
+      DATABASE_HOST: ${DATABASE_HOST}
+      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_USERNAME: ${DATABASE_USERNAME}
+      DATABASE_PASSWORD: ${DATABASE_PASSWORD}
+    networks:
+      - setup-app-network
+    volumes:
+      - ./api:/srv/app
+    ports:
+      - "1337:1337"
+
+  mongosetup:
+    image: mongo
+    container_name: mongosetup
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    networks:
+      - setup-app-network
+    volumes:
+      - strapidata:/data/db
+    ports:
+      - "27017:27017"
+    logging:
+      driver: none
+
+  setupclient:
+    build:
+      context: ./client
+      dockerfile: ./Dockerfile
+    container_name: setupclient
+    env_file: .env
+    tty: true
+    stdin_open: true
+    networks:
+      - setup-app-network
+    environment:
+      API_URL: ${API_URL}
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/usr/src/app
+    command: bash -c "npm run dev"
+
+networks:
+  setup-app-network:
+    driver: bridge
+
+volumes:
+  strapidata:

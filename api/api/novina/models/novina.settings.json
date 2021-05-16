@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "novinas",
+  "info": {
+    "name": "Novina"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
